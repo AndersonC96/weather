@@ -6,20 +6,21 @@ document.getElementById('weatherForm').addEventListener('submit', function(e){
         .then(response => response.json())
         .then(data => {
             if(data.error){
-                weatherResult.innerHTML = `<p>${data.error.message}</p>`;
+                weatherResult.innerHTML = `<p class="text-red-500">${data.error.message}</p>`;
             }else{
                 const temp = data.current.temp_c;
                 const description = data.current.condition.text;
                 const icon = data.current.condition.icon;
                 weatherResult.innerHTML = `
-                    <h2>${city}</h2>
-                    <p>Temperature: ${temp}°C</p>
-                    <p>Condition: ${description}</p>
-                    <img src="${icon}" alt="${description}">
+                    <h2 class="text-2xl font-semibold mb-2">${city}</h2>
+                    <p class="text-xl">Temperature: ${temp}°C</p>
+                    <p class="text-lg mb-4">Condition: ${description}</p>
+                    <img class="mx-auto" src="${icon}" alt="${description}">
                 `;
             }
         })
         .catch(error => {
-            weatherResult.innerHTML = `<p>Error fetching weather data</p>`;
+            console.error('Error fetching weather data:', error);
+            weatherResult.innerHTML = `<p class="text-red-500">Error fetching weather data: ${error.message}</p>`;
         });
 });
