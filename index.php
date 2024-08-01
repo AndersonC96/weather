@@ -11,10 +11,10 @@
         <div class="container max-w-md mx-auto bg-white dark:bg-gray-800 dark:text-gray-200 p-8 rounded-lg shadow-lg">
             <h1 class="text-3xl font-bold mb-6 text-center">Weather App</h1>
             <div class="flex justify-center mb-4">
-                <div id="themeToggle" class="theme-toggle cursor-pointer flex items-center justify-center w-20 h-10 bg-gray-300 dark:bg-gray-700 rounded-full relative">
-                    <span class="toggle-light absolute left-2 text-gray-900 dark:text-gray-400">Light</span>
-                    <span class="toggle-dark absolute right-2 text-gray-400 dark:text-gray-100">Dark</span>
-                    <div class="toggle-circle w-8 h-8 bg-white dark:bg-gray-800 rounded-full absolute left-1 dark:left-11 transition-transform duration-300"></div>
+                <div id="themeToggle" class="relative flex items-center justify-between w-20 h-10 bg-gray-300 dark:bg-gray-700 rounded-full cursor-pointer p-1">
+                    <span class="toggle-light text-gray-900 dark:text-gray-400">☀️</span>
+                    <span class="toggle-dark text-gray-400 dark:text-gray-100">🌙</span>
+                    <div class="toggle-circle w-8 h-8 bg-white dark:bg-gray-800 rounded-full absolute transform transition-transform duration-300"></div>
                 </div>
             </div>
             <form id="weatherForm" class="mb-4">
