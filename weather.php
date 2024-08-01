@@ -1,5 +1,5 @@
 <?php
-    $config = include('./weather/api.php');
+    $config = include('api.php');
     $apiKey = $config['api_key'];
     if(isset($_GET['city'])){
         $city = urlencode($_GET['city']);
