@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', function(){
     const themeToggle = document.getElementById('themeToggle');
-    const body = document.body;
+    const html = document.documentElement;
     const savedTheme = localStorage.getItem('theme');
     if(savedTheme){
-        if(savedTheme === 'dark'){
-            body.classList.add('dark');
-        }else{
-            body.classList.remove('dark');
+        if (savedTheme === 'dark'){
+            html.classList.add('dark');
+        } else{
+            html.classList.remove('dark');
         }
     }
     themeToggle.addEventListener('click', function(){
-        body.classList.toggle('dark');
-        if(body.classList.contains('dark')){
+        html.classList.toggle('dark');
+        if(html.classList.contains('dark')){
             localStorage.setItem('theme', 'dark');
         }else{
             localStorage.setItem('theme', 'light');
@@ -24,7 +24,7 @@ document.getElementById('weatherForm').addEventListener('submit', function(e){
     const weatherResult = document.getElementById('weatherResult');
     fetch(`weather.php?city=${city}`)
         .then(response => response.json())
-        .then(data => {
+        .then(data =>{
             if(data.error){
                 weatherResult.innerHTML = `<p class="text-red-500">${data.error.message}</p>`;
             }else{
@@ -39,7 +39,7 @@ document.getElementById('weatherForm').addEventListener('submit', function(e){
                 `;
             }
         })
-        .catch(error => {
+        .catch(error =>{
             console.error('Error fetching weather data:', error);
             weatherResult.innerHTML = `<p class="text-red-500">Error fetching weather data: ${error.message}</p>`;
         });
