@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
-    const container = document.querySelector('.container');
     const savedTheme = localStorage.getItem('theme');
     if(savedTheme){
         if(savedTheme === 'dark'){
