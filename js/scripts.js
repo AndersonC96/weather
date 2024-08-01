@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function(){
     const html = document.documentElement;
     const savedTheme = localStorage.getItem('theme');
     if(savedTheme){
-        if (savedTheme === 'dark'){
+        if(savedTheme === 'dark'){
             html.classList.add('dark');
-        } else{
+        }else{
             html.classList.remove('dark');
         }
     }
