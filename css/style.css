@@ -7,7 +7,7 @@ body{
 .theme-toggle{
     display: flex;
     align-items: center;
-    justify-between;
+    justify-content: space-between;
     width: 100px;
     height: 40px;
     background-color: #e2e8f0;
@@ -18,9 +18,17 @@ body{
     padding: 1px;
 }
 .toggle-light, .toggle-dark{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     pointer-events: none;
+}
+.toggle-light{
+    left: 10px;
+    color: #000;
+}
+.toggle-dark{
+    right: 10px;
+    color: #fff;
 }
 .toggle-circle{
     width: 36px;
@@ -28,11 +36,20 @@ body{
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
-    top: 1px;
-    left: 1px;
-    transition: transform 0.3s;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.dark .toggle-circle{
-    transform: translateX(48px);
+body.dark .toggle-circle{
+    left: 62px;
+}
+body.dark .theme-toggle{
+    background-color: #4a5568;
+}
+body.dark .toggle-light{
+    color: #718096;
+}
+body.dark .toggle-dark{
+    color: #fff;
 }
