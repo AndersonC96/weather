@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body class="bg-gray-100 flex items-center justify-center h-screen transition-colors duration-300">
-        <div class="container max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg dark-mode">
+        <div class="container max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
             <h1 class="text-3xl font-bold mb-6 text-center">Weather App</h1>
             <div class="flex justify-center mb-4">
                 <div id="themeToggle" class="theme-toggle">
