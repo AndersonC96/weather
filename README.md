@@ -61,7 +61,7 @@ Siga as instruções abaixo para configurar e executar o projeto em seu ambiente
         Abra o navegador e vá para http://localhost:8000
     ```
 
-### Uso
+## Uso
 
 1. Digite o nome da cidade: No campo de entrada, digite o nome da cidade para a qual deseja obter a previsão do tempo.
 2. Escolha a unidade de medida: Selecione entre Celsius ou Fahrenheit.
