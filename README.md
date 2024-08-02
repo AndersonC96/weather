@@ -63,7 +63,7 @@ Siga as instruções abaixo para configurar e executar o projeto em seu ambiente
 
 ### Uso
 
-    I.      Digite o nome da cidade: No campo de entrada, digite o nome da cidade para a qual deseja obter a previsão do tempo.
-    II.     Escolha a unidade de medida: Selecione entre Celsius ou Fahrenheit.
-    III.    Clique no botão "Get Weather": A previsão do tempo será exibida abaixo.
-    IV.     Alternância de tema: Use o botão de alternância de tema para mudar entre os temas claro e escuro.
+1. Digite o nome da cidade: No campo de entrada, digite o nome da cidade para a qual deseja obter a previsão do tempo.
+2. Escolha a unidade de medida: Selecione entre Celsius ou Fahrenheit.
+3. Clique no botão "Get Weather": A previsão do tempo será exibida abaixo.
+4. Alternância de tema: Use o botão de alternância de tema para mudar entre os temas claro e escuro.
