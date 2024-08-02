@@ -38,11 +38,11 @@ body{
     position: absolute;
     top: 2px;
     left: 2px;
-    transition: left 0.3s;
+    transition: transform 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 body.dark .toggle-circle{
-    left: 62px;
+    transform: translateX(40px);
 }
 body.dark .theme-toggle{
     background-color: #4a5568;
