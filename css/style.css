@@ -1,10 +1,15 @@
-body{
+/* css/styles.css */
+
+body {
     transition: background-color 0.3s, color 0.3s;
 }
-.container{
+
+.container {
     transition: background-color 0.3s, color 0.3s;
 }
-.theme-toggle{
+
+/* Estilos para o botão de alternância de tema */
+.theme-toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,20 +22,24 @@ body{
     transition: background-color 0.3s;
     padding: 1px;
 }
-.toggle-light, .toggle-dark{
+
+.toggle-light, .toggle-dark {
     font-size: 14px;
     font-weight: bold;
     pointer-events: none;
 }
-.toggle-light{
+
+.toggle-light {
     left: 10px;
     color: #000;
 }
-.toggle-dark{
+
+.toggle-dark {
     right: 10px;
     color: #fff;
 }
-.toggle-circle{
+
+.toggle-circle {
     width: 36px;
     height: 36px;
     background-color: #fff;
@@ -41,15 +50,21 @@ body{
     transition: left 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-body.dark .toggle-circle{
+
+body.dark .toggle-circle {
     left: 62px;
 }
-body.dark .theme-toggle{
+
+body.dark .theme-toggle {
     background-color: #4a5568;
 }
-body.dark .toggle-light{
+
+body.dark .toggle-light {
     color: #718096;
 }
-body.dark .toggle-dark{
+
+body.dark .toggle-dark {
     color: #fff;
 }
+
+/* Adicione quaisquer outros estilos personalizados aqui */
