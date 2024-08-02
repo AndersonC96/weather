@@ -1,12 +1,17 @@
 <?php
     $config = include('api.php');
     $apiKey = $config['api_key'];
-    if(isset($_GET['city'])){
+    if(isset($_GET['city']) && isset($_GET['units'])){
         $city = urlencode($_GET['city']);
-        $apiUrl = "http://api.weatherapi.com/v1/current.json?key={$apiKey}&q={$city}&aqi=no";
+        $units = $_GET['units'];
+        $apiUrl = "http://api.weatherapi.com/v1/forecast.json?key={$apiKey}&q={$city}&days=3&units={$units}";
         $weatherData = file_get_contents($apiUrl);
-        echo $weatherData;
+        if($weatherData === FALSE){
+            echo json_encode(['error' => 'Failed to fetch weather data']);
+        }else{
+            echo $weatherData;
+        }
     }else{
-        echo json_encode(['error' => 'No city provided']);
+        echo json_encode(['error' => 'No city or units provided']);
     }
 ?>
